@@ -8,7 +8,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 public class Cal extends Application {
 	public static void main(String[] args) {
 		launch(args);
@@ -16,31 +17,90 @@ public class Cal extends Application {
 	@Override
 	public void start(Stage a) {
 		GridPane display = new GridPane();
-		GridPane display2 = new GridPane();
-		//FlowPane display = new FlowPane();
 		TextField Tx=new TextField();
 		Tx.setPrefSize(320, 80);
 		
 		Button B1 = new Button("1");
 		B1.setPrefSize(80, 80);
+		B1.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B1.getText());
+			}
+		});
 		Button B2 = new Button("2");
 		B2.setPrefSize(80, 80);
+		B2.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B2.getText());
+			}
+		});
 		Button B3 = new Button("3");
 		B3.setPrefSize(80, 80);
+		B3.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B3.getText());
+			}
+		});
 		Button B4 = new Button("4");
 		B4.setPrefSize(80, 80);
+		B4.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B4.getText());
+			}
+		});
 		Button B5 = new Button("5");
 		B5.setPrefSize(80, 80);
+		B5.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B5.getText());
+			}
+		});
 		Button B6 = new Button("6");
 		B6.setPrefSize(80, 80);
+		B6.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B6.getText());
+			}
+		});
 		Button B7 = new Button("7");
 		B7.setPrefSize(80, 80);
+		B7.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B7.getText());
+			}
+		});
 		Button B8 = new Button("8");
 		B8.setPrefSize(80, 80);
+		B8.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B8.getText());
+			}
+		});
 		Button B9 = new Button("9");
 		B9.setPrefSize(80, 80);
+		B9.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B9.getText());
+			}
+		});
 		Button B0 = new Button("0");
 		B0.setPrefSize(80, 80);
+		B0.setOnAction(new EventHandler<ActionEvent>(){
+			@Override
+			public void handle(ActionEvent e){
+				Tx.setText(Tx.getText()+B0.getText());
+			}
+		});
+		
 		Button Bequ = new Button("=");
 		Bequ.setPrefSize(80, 80);
 		Button Badd = new Button("+");
@@ -59,6 +119,7 @@ public class Cal extends Application {
 		Bpa.setPrefSize(80, 80);
 		Button BC = new Button("C");
 		BC.setPrefSize(80, 80);
+		
 		Button BCE = new Button("CE");
 		BCE.setPrefSize(80, 80);
 		Button Bdot = new Button(".");
@@ -133,4 +194,5 @@ public class Cal extends Application {
 		
 		a.show();
 	}
+	
 }
