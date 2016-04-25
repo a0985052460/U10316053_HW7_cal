@@ -3,6 +3,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.application.Application;
+import javafx.scene.control.TextField;
 import javafx.scene.Scene;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
@@ -15,6 +16,11 @@ public class Cal extends Application {
 	@Override
 	public void start(Stage a) {
 		GridPane display = new GridPane();
+		GridPane display2 = new GridPane();
+		//FlowPane display = new FlowPane();
+		TextField Tx=new TextField();
+		Tx.setPrefSize(320, 80);
+		
 		Button B1 = new Button("1");
 		B1.setPrefSize(80, 80);
 		Button B2 = new Button("2");
@@ -74,39 +80,40 @@ public class Cal extends Application {
 		BBack.setPrefSize(80, 80);
 		
 		
+		display.add(Tx, 1, 1,4,1);
 		
-		display.add(BMC,1,0);
-		display.add(BMR,2,0);
-		display.add(BMadd,3,0);
-		display.add(BMsub,4,0);
+		display.add(BMC,1,2);
+		display.add(BMR,2,2);
+		display.add(BMadd,3,2);
+		display.add(BMsub,4,2);
 		
-		display.add(B4,1,4);
-		display.add(B1,1,5);
-		display.add(Bsign,1,6);
-		display.add(Bpa,1,1);
-		display.add(B7,1,3);
-		display.add(BCE,1,2);
+		display.add(B4,1,6);
+		display.add(B1,1,7);
+		display.add(Bsign,1,8);
+		display.add(Bpa,1,3);
+		display.add(B7,1,5);
+		display.add(BCE,1,4);
 		
-		display.add(B2,2,5);
-		display.add(B5,2,4);
-		display.add(B8,2,3);
-		display.add(B0,2,6);
-		display.add(Bddiv,2,1);
-		display.add(BC,2,2);
+		display.add(B2,2,7);
+		display.add(B5,2,6);
+		display.add(B8,2,5);
+		display.add(B0,2,8);
+		display.add(Bddiv,2,3);
+		display.add(BC,2,4);
 		
-		display.add(Bxx,3,1);
-		display.add(Bdot,3,6);
-		display.add(B9,3,3);
-		display.add(B6,3,4);
-		display.add(BBack,3,2);
-		display.add(B3,3,5);
+		display.add(Bxx,3,3);
+		display.add(Bdot,3,8);
+		display.add(B9,3,5);
+		display.add(B6,3,6);
+		display.add(BBack,3,4);
+		display.add(B3,3,7);
 		
-		display.add(Bequ,4,6);
-		display.add(Badd,4,5);
-		display.add(Bsub,4,4);
-		display.add(Bmul,4,3);
-		display.add(Bdiv,4,2);
-		display.add(B1divx,4,1);
+		display.add(Bequ,4,8);
+		display.add(Badd,4,7);
+		display.add(Bsub,4,6);
+		display.add(Bmul,4,5);
+		display.add(Bdiv,4,4);
+		display.add(B1divx,4,3);
 		
 		
 		MenuBar bar = new MenuBar();
@@ -115,13 +122,15 @@ public class Cal extends Application {
 		Menu menu3 = new Menu("說明");
 		
 		bar.getMenus().addAll(menu1,menu2,menu3);
+
 		display.add(bar,0,0,6,1);
+		
 		Scene scene = new Scene(display,Color.BLACK);
 		
-		a.setTitle("小算盤"); 
-		// Set the stage title
+		a.setTitle("小算盤 U10316053 程柏綸"); 
+		
 		a.setScene(scene); 
-		// Place the scene in the stage
+		
 		a.show();
 	}
 }
