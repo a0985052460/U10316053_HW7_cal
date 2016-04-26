@@ -138,6 +138,7 @@ public class Cal extends Application {
 		BC.setPrefSize(80, 80);
 		BC.setOnAction(new EventHandler<ActionEvent>(){public void handle(ActionEvent e){
 			Tx.setText("");
+			OB=5;
 		}});
 		Button BCE = new Button("CE");
 		BCE.setPrefSize(80, 80);
